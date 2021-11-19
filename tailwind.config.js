@@ -1,6 +1,6 @@
 module.exports = {
   mode: 'jit',
-  purge: ['./public/*.html'],
+  purge: ['./src/index.html'],
   corePlugins: {
     preflight: false
   },
@@ -15,7 +15,7 @@ module.exports = {
         xl: '1124px',
         '2xl': '1124px'
       }
-    },
+    }
   },
   variants: {
     extend: {}

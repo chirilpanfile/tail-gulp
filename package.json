@@ -18,8 +18,10 @@
     "node": ">=2.3.0"
   },
   "scripts": {
+    "dev:tailwinds": "tailwind src/assets/css/tailwind.config.css -o src/assets/css/tailwind.css --watch",
+    "build:tailwinds": "tailwind build src/assets/css/tailwind.config.css -o src/assets/css/tailwind.css",
     "dev": "npm start",
-    "start": "run-p eleventy-watch gulp-dev",
+    "start": "run-p eleventy-watch gulp-dev dev:tailwinds",
     "build": "run-s clean prettier-check eleventy-build gulp-build",
     "css": "run-s clean lint-css eleventy-build gulp-build-js gulp-build-css",
     "lint-css": "stylelint \"src/**/*.{css,scss}\"",
